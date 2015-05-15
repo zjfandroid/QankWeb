@@ -1,0 +1,140 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+a, img {
+	border: 0;
+}
+
+body {
+	background-color: #f1f1f1;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-table;
+} /* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+} /* End hide from IE-mac */
+*+html .clearfix {
+	min-height: 1%;
+}
+
+#example_wrapper {
+	float: left;
+	height:800px;
+	padding-top: 50px;
+	margin-left: 16%;
+	margin-top: 50px;
+	min-height: 100%;
+}
+
+.lanrenzhijia {
+	width: 100%;
+	margin: 10px auto 0 -60px;
+	overflow: hidden;
+}
+
+.lanrenzhijia ul {
+	width: 1250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.lanrenzhijia ul li {
+	float: left;
+	margin-right: 20px;
+	margin-bottom: 40px;
+	display: inline;
+	width: 280px;
+	height: 228px;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.lanrenzhijia ul li .photo {
+	width: 280px;
+	height: 180px;
+	overflow: hidden;
+}
+
+.lanrenzhijia .rsp {
+	width: 280px;
+	height: 180px;
+	overflow: hidden;
+	position: absolute;
+	background: rgb();
+	top: 0px;
+	left: 0px;
+}
+
+.lanrenzhijia .info {
+	width: 280px;
+	height: 80px;
+	overflow: hidden;
+	position: absolute;
+	background: #fff;
+	top: 0px;
+	left: 0px;
+	margin-top: 180px;
+	line-height: 50px
+}
+
+.info_name {
+	text-align: center;
+	color: #6d6d6d;
+	font-size: 14px;
+	margin-left: 20px
+}
+
+.info_type {
+	float: right;
+	font-size: 14px;
+	color: #bfbfbf;
+	margin-right: 20px
+}
+
+.lanrenzhijia .text {
+	position: absolute;
+	width: 280px;
+	height: 180px;
+	left: -280px;
+	top: 0px;
+	overflow: hidden;
+	background: rgba(67, 186, 242, 0.95);
+}
+
+.lanrenzhijia .text h3 {
+	width: 280px;
+	margin-top: 50px;
+	height: 60px;
+	line-height: 30px;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+
+.lanrenzhijia .text a {
+	text-decoration: none
+}
+
+.lanrenzhijia .text div {
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 18px;
+}

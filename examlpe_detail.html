@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>仟客—关于我们</title>
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+<meta name="keywords" content="深圳IPHONE开发|深圳IPHONE外包|IPHONE开发公司|苹果外包|IPHONE客户端"/>
+<meta name="description" content="深圳市仟客信息科技有限公司成立于2014年，是一家专注于移动APP应用软件研发创新型企业，由一群有着研发精神和移动互联网创新精神的团队组成。公司始终本着“诚信、务实、创新、共赢”的发展理念，不断创造出让客户满意、感动的产品和服务。公司在移动应用平台上已经积累了丰富的开发和项目团队管理经验，包括iPhone、iPad、Android、微信等系统平台；行业类型涉及新闻、交友、电商、美容、旅游、健康、教育、餐饮、数码、出版等行业。"/>
+
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+
+<script type="text/javascript">
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?ad889522b20630b97f2bf5d208caa137";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+
+	function getParameter(param) {
+		var query = window.location.search;//获取URL地址中？后的所有字符  
+		var iLen = param.length;//获取你的参数名称长度  
+		var iStart = query.indexOf(param);//获取你该参数名称的其实索引  
+		if (iStart == -1)//-1为没有该参数  
+			return "";
+		iStart += iLen + 1;
+		var iEnd = query.indexOf("&", iStart);//获取第二个参数的其实索引  
+		if (iEnd == -1)//只有一个参数  
+			return query.substring(iStart);//获取单个参数的参数值  
+		return query.substring(iStart, iEnd);//获取第二个参数的值  
+	}
+
+	function init() {
+		var param = getParameter("index");
+		document.getElementById("img_detail").src = param;
+	}
+
+	function loadFinished() {
+		var div = document.getElementById("loading");
+		div.style.display = "none";
+
+		div = document.getElementById("img_detail");
+		div.style.display = "inline";
+	}
+</script>
+
+<div id="nav_wraper">
+	<img src="images/logo.png" onclick="location.href='index.html'"
+		style="margin-left: 240px; margin-top: 1.2%; position: fixed; float: left; cursor: pointer;">
+	<ul id="nav">
+		<li><a href="about.html">关于</a></li>
+		<li><a href="contact.html">联系</a></li>
+		<li><a href="service.html">服务</a></li>
+		<li class="active"><a href="example.html">案例</a></li>
+		<li><a href="index.html">首页</a></li>
+	</ul>
+</div>
+</head>
+<body onload="init()">
+	<div id="loading">
+		<p style="text-align: center; vertical-align: middle;">
+			<img id="loading_img" alt="努力加载中。。。" src="images/loading.gif">
+		</p>
+	</div>
+
+	<div id="about_qank">
+		<input id="a" type="text" />
+		<p
+			style="text-align: center; vertical-align: middle; min-height: 1024px;">
+			<img id="img_detail" alt="努力加载中。。。" onload="loadFinished()"
+				style="width: auto; height: auto; background-color: #f1f1f1; margin-top: 80px; display: none;">
+		</p>
+	</div>
+
+	<div id="footer-link">
+		<a href="http://www.leichuish.com/" target="_blank"
+			style="margin-left: 0%;">上海雷锤－－上海最专业的APP外包</a> <a
+			href="http://www.jiyuankaiguan.com/" target="_blank"
+			style="margin-left: 200px;">益创电气－－电气开关／互感器制造商</a>
+	</div>
+	<div id="footer">
+		<div id="footer-up">
+			<span>深圳仟客移动科技有限公司</span>
+		</div>
+		<div id="footer-bottom">
+			<span>Copyright (C) 2015 优设(UISDC) - 优秀网页设计联盟 - 粤ICP备11016544号</span>
+		</div>
+	</div>
+</body>
+</html>

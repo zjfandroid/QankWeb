@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8">
+<title>仟客—联系我们</title>
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+<meta name="keywords" content="深圳IOS开发|深圳IOS外包|IOS开发公司|苹果APP外包|IPHONE开发" />
+<meta name="description"
+	content="深圳市仟客信息科技有限公司成立于2014年，是一家专注于移动APP应用软件研发创新型企业，由一群有着研发精神和移动互联网创新精神的团队组成。公司始终本着“诚信、务实、创新、共赢”的发展理念，不断创造出让客户满意、感动的产品和服务。公司在移动应用平台上已经积累了丰富的开发和项目团队管理经验，包括iPhone、iPad、Android、微信等系统平台；行业类型涉及新闻、交友、电商、美容、旅游、健康、教育、餐饮、数码、出版等行业。" />
+
+<link rel="stylesheet" type="text/css" href="css/base.css" />
+<link rel="stylesheet" href="css/contact.css" type="text/css" />
+
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript">
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?ad889522b20630b97f2bf5d208caa137";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+<div id="nav_wraper">
+	<img src="images/logo.png" onclick="location.href='index.html'"
+		style="margin-left: 240px; margin-top: 1.2%; position: fixed; float: left; cursor: pointer;">
+	<ul id="nav">
+		<li><a href="about.html">关于</a></li>
+		<li class="active"><a href="contact.html">联系</a></li>
+		<li><a href="service.html">服务</a></li>
+		<li><a href="example.html">案例</a></li>
+		<li><a href="index.html">首页</a></li>
+	</ul>
+</div>
+</head>
+<body>
+	<div id="contactFormContainer">
+		<div id="msg-left">
+			<img alt="地址" src="images/msg_left.png">
+		</div>
+		<div id="contactForm">
+			<!-- <form name="form" method="GET" action="./test.html"> -->
+			<!-- "http://192.168.3.14:8080/qank/CustomerCollect" -->
+			<form id="formLeave">
+				<input id="name" name="name" type="text" value="姓名(Name)"
+					onfocus="if(value=='姓名(Name)') {value=''}"
+					onblur="if (value=='') {value='姓名(Name)'}" /> <input id="phone"
+					name="phone" type="text" value="电话(TEL)"
+					onfocus="if(value=='电话(TEL)') {value=''}"
+					onblur="if (value=='') {value='电话(TEL)'}"> <input
+					id="email" name="email" type="text" value="邮箱(Email)"
+					onfocus="if(value=='邮箱(Email)') {value=''}"
+					onblur="if (value=='') {value='邮箱(Email)'}" />
+				<textarea id="message" name="message" rows="3" cols="20"
+					onKeyDown="textdown(event)" onKeyUp="textup()"
+					onfocus="if(value=='内容（Message）'){value=''}"
+					onblur="if (value ==''){value='内容（Message）'}">内容（Message）</textarea>
+				<input id="register" type="submit" value="提 交" class="register" /><span
+					id="messageSent">提交成功！</span>
+			</form>
+		</div>
+		<div id="msg-right">
+			<span><span id="title">深圳仟客移动科技有限公司</span></br> </br></span> <span>公司地址：深圳市宝安区西乡地铁站海湾明珠2A701</br></span>
+			<span>邮政编码：528000</br></span> <span>联系电话：18239021607／13580926869</br></span> <span>QQ
+				: <a target="_blank"
+				href="http://wpa.qq.com/msgrd?v=3&uin=2537564771&site=qq&menu=yes"><span
+					id="qq_color">2537564771</span></a> <span>/</span> <a target="_blank"
+				href="http://wpa.qq.com/msgrd?v=3&uin=2254634147&site=qq&menu=yes"><span
+					id="qq_color">2254634147</span></a> </br>
+			</span> <span>E-mail：qanktop@126.com</br></span>
+		</div>
+	</div>
+	<div id="bg_qank">
+		<img alt="qank" src="images/contact_bg_qank.png">
+	</div>
+	<div id="map">
+		<img alt="地址" src="images/map.jpg" style="height: 100%; width: 100%;">
+	</div>
+
+	<div id="footer-link">
+		<a href="http://www.leichuish.com/" target="_blank"
+			style="margin-left: 0%;">上海雷锤－－上海最专业的APP外包</a> <a
+			href="http://www.jiyuankaiguan.com/" target="_blank"
+			style="margin-left: 200px;">益创电气－－电气开关／互感器制造商</a>
+	</div>
+	<div id="footer">
+		<div id="footer-up">
+			<span>深圳仟客移动科技有限公司</span>
+		</div>
+		<div id="footer-bottom">
+			<span>Copyright (C) 2015 优设(UISDC) - 优秀网页设计联盟 - 粤ICP备11016544号</span>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function() {
+
+		$('#register').click(function() {
+			var params = $('form').serialize(); //序列化表单的值
+			$.post("http://www.qank.top/qank/CustomerCollect", {
+				name : $("#name").val(),
+				phone : $("#phone").val(),
+				email : $("#email").val(),
+				message : $("#message").val()
+			}, function(data, status) {
+				alert("222提交成功！");
+				if (200 == status) {
+					alert("提交成功！");
+				} else {
+					alert("数据：" + data + "\n状态：" + status);
+				}
+				;
+			});
+
+		});
+	});
+	function textdown(e) {
+		textevent = e;
+		if (textevent.keyCode == 8) {
+			return;
+		}
+		if (document.getElementById('Message').value.length >= 100) {
+			alert("大侠，手下留情，此处限字100")
+			if (!document.all) {
+				textevent.preventDefault();
+			} else {
+				textevent.returnValue = false;
+			}
+		}
+	}
+	function textup() {
+		var s = document.getElementById('Message').value;
+		//判断ID为text的文本区域字数是否超过100个 
+		if (s.length > 100) {
+			document.getElementById('textarea').value = s.substring(0, 100);
+		}
+	}
+</script>
+</html>

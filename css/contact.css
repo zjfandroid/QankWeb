@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+#msg-left {
+	float: left;
+	margin-bottom: 20px;
+	overflow: hidden;
+	width: 118px;
+	height: 110px;
+	margin-top: 116px;
+	margin-left: 90px;
+}
+
+#title {
+	font-size: 18px;
+	color: #6f6f6f;
+}
+
+#msg-right {
+	float: right;
+	overflow: hidden;
+	width: 350px;
+	margin-top: 100px;
+	display: inline;
+	font-size: 14px;
+	line-height: 24px;
+	color: #6f6f6f;
+}
+
+#qq_color {
+	font-size: 14px;
+	color: #41b1e7;
+}
+
+#bg_qank {
+	width: 616px;
+	height: 108px;
+	margin-left: 53%;
+	position: absolute;
+	margin-top: 356px;
+}
+
+#contactFormContainer {
+	float: left;
+	padding-top: 8px;
+	margin-top: 50px;
+	margin-left: 16%;
+}
+
+#contactForm {
+	float: left;
+	width: 360px;
+	margin-top: 100px;
+}
+
+#contactForm fieldset {
+	width: 370px;
+	border: none;
+}
+
+#contactForm label {
+	display: block;
+	color: #4e4e4e;
+	font-size: 12px;
+	font-family: Arial;
+	padding-bottom: 6px;
+}
+
+#contactForm input[type=text] {
+	display: block;
+	width: 300px;
+	height: 28px;
+	padding-left: 7px;
+	margin-bottom: 10px;
+	color: #CCCCCC;
+	background: #FFFFFF;
+	border: none;
+}
+
+#contactForm input[type=text]:FOCUS {
+	display: block;
+	width: 300px;
+	height: 28px;
+	padding-left: 7px;
+	margin-bottom: 10px;
+	color: #FFFFFF;
+	background: #FFFFFF;
+	border: none;
+	background: #41b1e7;
+	outline: none;
+	outline-color: #41b1e7;
+}
+
+#contactForm textarea {
+	display: block;
+	padding-left: 7px;
+	width: 300px;
+	margin-bottom: 10px;
+	height: 100px;
+	color: #CCCCCC;
+	background: #FFFFFF;
+	border: none;
+}
+
+#contactForm textarea:FOCUS {
+	display: block;
+	padding-left: 7px;
+	width: 300px;
+	margin-bottom: 6px;
+	height: 100px;
+	color: #FFFFFF;
+	background: #41b1e7;
+	border: none;
+	outline: none;
+	outline-color: #41b1e7;
+	padding-top: 3.5px;
+}
+
+#contactForm input[type=submit] {
+	background-color: #41b1e7;
+	border: solid 0px #41b1e7;
+	color: #eaeaea;
+	padding: 8px 23px;
+	float: left;
+	margin-right: -10px;
+	outline: medium;
+}
+
+#contactForm input[type=submit]:hover {
+	background: #888888;
+	color: #fff;
+	cursor: pointer;
+	outline: medium;
+}
+
+#messageSent {
+	float: left;
+	color: green;
+	display: none;
+	margin-top: 13px;
+	font-family: Georgia;
+	font-style: italic;
+	font-size: 11px;
+	margin-left: 44px;
+}
+
+#map {
+	float: left;
+	margin-top: 50px;
+	border: 10px solid #e3e9ec;
+}
