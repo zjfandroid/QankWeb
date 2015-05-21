@@ -38,50 +38,7 @@ $(function() {
 			this.addDownloadJump();
 			this.touchOperate();
 			this.whenFirstLoadedIn();
-			this.initGuide();
-			this.goHomeButtonHover();
-			this.getConfig()
-		},
-		getConfig : function() {
-			var c = "/mobile/data.json?v=150129-1";
-			$.ajax({
-				url : c,
-				type : "GET",
-				dataType : "json",
-				success : function(g) {
-					for ( var e in g) {
-						for ( var f in g[e]) {
-							if (e == "iphone") {
-								if ($("#i-" + f).length) {
-									$("#i-" + f).html(g[e][f])
-								}
-							} else {
-								if ($("#a-" + f).length) {
-									$("#a-" + f).html(g[e][f])
-								}
-							}
-						}
-					}
-				},
-				error : function() {
-				}
-			})
-		},
-		goHomeButtonHover : function() {
-			var d = $(".gohome-img-guide"), c = this;
-			$(".gohome_but").mouseenter(function(f) {
-				if (c.extendEffect) {
-					d.addClass("yb-init-rtl")
-				} else {
-					d.fadeIn()
-				}
-			}).mouseleave(function(f) {
-				if (c.extendEffect) {
-					d.removeClass("yb-init-rtl")
-				} else {
-					d.fadeOut()
-				}
-			})
+			this.initGuide()
 		},
 		showGuideInterface : function() {
 			var c = this, d = "3%";
@@ -593,19 +550,23 @@ function stopMove() {
 var indexExp = 0;
 
 function onClickLeft() {
-	if(indexExp > 0){
+	if (indexExp > 0) {
 		indexExp--;
-		var oUl = document.getElementById('wrap_example').getElementsByTagName('ul')[0];
-		startMoveExample(-(indexExp) * oUl.getElementsByTagName('li')[0].offsetWidth);
+		var oUl = document.getElementById('wrap_example').getElementsByTagName(
+				'ul')[0];
+		startMoveExample(-(indexExp)
+				* oUl.getElementsByTagName('li')[0].offsetWidth);
 	}
 }
 
 function onClickRight() {
-	var oUl = document.getElementById('wrap_example').getElementsByTagName('ul')[0];
-	
-	if(indexExp < oUl.getElementsByTagName('li').length-1){
+	var oUl = document.getElementById('wrap_example')
+			.getElementsByTagName('ul')[0];
+
+	if (indexExp < oUl.getElementsByTagName('li').length - 1) {
 		indexExp++;
-		startMoveExample(-(indexExp) * oUl.getElementsByTagName('li')[0].offsetWidth);
+		startMoveExample(-(indexExp)
+				* oUl.getElementsByTagName('li')[0].offsetWidth);
 	}
 }
 
@@ -636,9 +597,10 @@ function doMoveExample(iTarget) {
 	oUl.style.left = l + 'px';
 }
 
-//---------自动轮播----------
+// ---------自动轮播----------
 function autoPlay() {
-	var oUl = document.getElementById('wrap_example').getElementsByTagName('ul')[0];
+	var oUl = document.getElementById('wrap_example')
+			.getElementsByTagName('ul')[0];
 
 	indexExp++;
 	if (indexExp >= oUl.getElementsByTagName('li').length) {
@@ -726,4 +688,54 @@ jQuery(document).ready(function() {
 			}
 		});
 	}($('.news')));
+
+	$('#register').click(function() {
+		var params = $('form').serialize(); // 序列化表单的值
+		$.post("http://www.qank.top/qank/CustomerCollect", {
+			name : $("#name").val(),
+			phone : $("#phone").val(),
+			email : $("#email").val(),
+			message : $("#message").val()
+		}, function(data, status) {
+			alert("222提交成功！");
+			if (200 == status) {
+				alert("提交成功！");
+			} else {
+				alert("数据：" + data + "\n状态：" + status);
+			}
+			;
+		});
+
+	});
 });
+
+function textdown(e) {
+	textevent = e;
+	if (textevent.keyCode == 8) {
+		return;
+	}
+	if (document.getElementById('Message').value.length >= 100) {
+		alert("大侠，手下留情，此处限字100")
+		if (!document.all) {
+			textevent.preventDefault();
+		} else {
+			textevent.returnValue = false;
+		}
+	}
+}
+
+function textup() {
+	var s = document.getElementById('Message').value;
+	// 判断ID为text的文本区域字数是否超过100个
+	if (s.length > 100) {
+		document.getElementById('textarea').value = s.substring(0, 100);
+	}
+}
+
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "//hm.baidu.com/hm.js?ad889522b20630b97f2bf5d208caa137";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(hm, s);
+})();

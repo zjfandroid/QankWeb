@@ -131,6 +131,15 @@ body {
 	background-image: url('../images/qank_info.png');
 }
 
+.frist-section a.qank_down {
+	width: 40px;
+	height: 50px;
+	top: 88%;
+	left: 50%;
+	margin-left: -25px;
+	background-image: url('../images/down.gif');
+}
+
 .section .section-title {
 	height: 140px;
 	width: 480px;
@@ -415,7 +424,6 @@ li {
 	position: absolute;
 	top: 18px;
 	width: 15px;
-	background: url(../images/main_news.png) no-repeat
 }
 
 .news.close .control {
